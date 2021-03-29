@@ -1,0 +1,30 @@
+:root {
+  --results-columns: 2;
+}
+
+.ListOfGifs {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: masonry;
+  align-items: center;
+  gap: 0 16px;
+}
+
+.ListOfGifs-item {
+  background-color: #eee;
+  display: inline-block;
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  :root {
+    --results-columns: 3;
+  }
+}
+
+@media (min-width: 800px) {
+  :root {
+    --results-columns: 4;
+  }
+}
